@@ -4,29 +4,29 @@
 }
 .carousel-image{
     padding: 1em;
-    width: 100%;
-    cursor: pointer;
-   
+    width: 100%;   
 }
 .img__wrap {
+    cursor: pointer;
     position: relative;
     width: calc(25% - 2em);
+    &:hover {
+        opacity: .65;
+    }
   }
   .img__description_layer {
+    padding: 1em;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(36, 62, 206, 0.6);
     color: #fff;
     visibility: hidden;
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-    /* transition effect. not necessary */
     transition: opacity .2s, visibility .2s;
   }
   
