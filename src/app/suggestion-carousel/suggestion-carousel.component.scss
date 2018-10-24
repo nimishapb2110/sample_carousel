@@ -1,0 +1,13 @@
+.carousel-image-inline{
+    display: flex;
+    flex-direction: row;
+}
+.carousel-image{
+    margin: 1em;
+    flex: 1;
+    width: calc(25% - 2em);
+    cursor: pointer;
+    &:hover{
+        opacity: .65;
+    }
+}

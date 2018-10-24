@@ -1,0 +1,23 @@
+<form class="apply-form-container" (ngSubmit)="onSubmit()" #searchForm="ngForm">
+  <mat-form-field>
+    <input matInput placeholder="From" required>
+    <mat-error>First name is required!</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="To" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type=number placeholder="Adults">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type=number placeholder="Children">
+  </mat-form-field>
+  <button type="submit" class="btn btn-success" [disabled]="!searchForm.form.valid">Submit</button>
+</form>
+<app-suggestion-carousel *ngIf="submitedFlag"></app-suggestion-carousel>
+
