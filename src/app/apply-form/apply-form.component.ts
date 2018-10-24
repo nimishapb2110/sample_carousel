@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplyFormComponent implements OnInit {
   submitedFlag: Boolean = false;
+  formData: Object = {'fromLocation': '', 'toLocation':'' };
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +16,6 @@ export class ApplyFormComponent implements OnInit {
   onSubmit() {
     this.submitedFlag = true;
 
-    alert("No flight available!");
+   // alert("No flight available!");
   }
 }
